@@ -105,8 +105,7 @@
         }
         
         if (value) {
-            NSString *propertyName = FMXLowerCamelCaseFromSnakeCase(column.name);
-            [model setValue:value forKey:propertyName];
+            [model setValue:value forKey:column.propertyName];
             
             /*
             SEL selector = FMXSetterSelectorFromColumnName(column.name);
@@ -154,8 +153,7 @@
         }
         
         if (value) {
-            NSString *propertyName = FMXLowerCamelCaseFromSnakeCase(column.name);
-            [model setValue:value forKey:propertyName];
+            [model setValue:value forKey:column.propertyName];
 
             /*
             SEL selector = FMXSetterSelectorFromColumnName(column.name);
